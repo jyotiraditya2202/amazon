@@ -1,303 +1,291 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome.min.css">
-
-<style>
-	html, body {
-  margin: 0;
-  font-family: arial,sans-serif;
-  min-width: 900px;
-  line-height: 14px;
-  font-size: 14px;
-}
-* {
-  box-sizing: border-box;
-}
-a {
-  color: #0066c0;
-}
-a:hover {
-  color: #c45500;
-}
-#banner {
-  background: #F6F6F6 url('../img/banner.jpg') no-repeat top left;
-  height: 55px;
-  background-size: 1920px;
-  min-width: 1000px;
-  display: block;
-}
-header {
-  background-color: #232f3e;
-  height: 99px;
-}
-.nav-left {
-  position: relative;
-  float: left;
-  width: auto;
-  display: inline-block;
-}
-.nav-right {
-  position: relative;
-  float: right;
-  width: auto;
-  display: inline-block;
-}
-.nav-fill {
-  width: auto;
-  white-space: nowrap;
-  overflow: hidden;
-}
-#nav-logo {
-  padding: 11px 18px 0 24px;
-  position: relative;
-  width: 192px;
-}
-#nav-logo .nav-logo-link {
-  background: transparent url('../img/logo.png') no-repeat top left;
-  background-size: 102px;
-  width: 192px;
-  height: 32px;
-  display: block;
-}
-#nav-logo .nav-logo-tagline {
-  color: #48a3c6;
-  position: absolute;
-  top: 31px;
-  left: 93px;
-  font-size: 11px;
-  line-height: 11px;
-  font-family: arial, sans-serif;
-  font-weight: 700;
-}
-#nav-logo .nav-logo-tagline:hover {
-  color: #ffffff;
-}
-#nav-holiday {
-  top: 9px;
-  position: relative;
-  background-image: url('../img/fathers_day.jpg');
-  width: 400px;
-  height: 39px;
-}
-#nav-holiday a {
-  display: block;
-  height: 100%;
-}
-#nav-search {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  padding-top: 11px;
-  padding-right: 25px;
-}
-#nav-search input {
-  width: 100%;
-}
-#nav-search .nav-left {
-  height: 35px;
-  background-color: #f3f3f3;
-  border-radius: 4px 0 0 4px;
-  border: 1px solid #cdcdcd;
-  overflow: hidden;
-}
-#nav-search .nav-left:hover {
-  background-color: #dadada;
-  border-left-color: #dadada;
-  border-top-color: #dadada;
-  border-bottom-color: #dadada;
-}
-#nav-search .nav-search-label {
-  color: #777;
-  display: block;
-  font-size: 12px;
-  line-height: 33px;;
-  margin-right: 21px;
-  margin-left: 10px;
-}
-#nav-search .nav-left i {
-  position: absolute;
-  top: 10px;
-  right: 9px;
-  color: #a0a0a0;
-  font-size: 11px;
-}
-#nav-search select {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  opacity: 0;
-  height: 35px;
-  display: block;
-  outline: none;
-  cursor: pointer;
-}
-#nav-search .nav-fill {
-  height: 35px;
-  overflow: hidden;
-}
-#nav-search .nav-fill input {
-  border: none;
-  height: 35px;
-  padding: 5px 10px;
-  font-size: 15px;
-  color: #111;
-  outline: none;
-}
-#nav-search .nav-right {
-  background-color: #febd69;
-  width: 45px;
-  height: 35px;
-  border-radius: 0 4px 4px 0;
-}
-#nav-search .nav-right:hover {
-  background-color: #f3a847;
-}
-#nav-search .nav-right i {
-  position: absolute;
-  top: 5px;
-  right: 13px;
-  color: #333;
-  font-size: 22px;
-  opacity: 0.9;
-}
-#nav-search .nav-right input {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: block;
-  outline: none;
-  cursor: pointer;
-  background: none;
-  border: none;
-  text-indent: -1000px;
-}
-#nav-main ul {
-  list-style-type: none;
-  position: relative;
-  padding: 0;
-  margin: 18px 0 0 0;
-}
-#nav-main li {
-  display: inline-block;
-  padding: 10px 9px 0 0;
-}
-#nav-main a {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-}
-#nav-main .nav-a {
-  padding: 7px 10px;
-  border: 1px solid transparent;
-  display: inline-block;
-  position: relative;
-}
-#nav-main .nav-a:hover {
-  border: 1px solid #4f5965;
-  border-radius: 3px;
-  box-shadow: 0 1px 0 0 rgba(255,255,255,.5);
-}
-#nav-main .nav-a span {
-  display: block;
-  margin-left: -2px;
-  font-weight: 300;
-  color: #ccc;
-  font-size: 12px;
-}
-#nav-main i.fa-caret-down {
-  color: #ccc;
-  font-size: 11px;
-  padding-left: 3px;
-}
-#nav-main .nav-left {
-  height: 55px;
-}
-#nav-main .nav-left .nav-shop {
-  float: left;
-  width: 192px;
-  padding: 4px 12px 0 15px;
-}
-#nav-main .nav-left .nav-shop a {
-  margin-top: 16px;
-}
-#nav-main .nav-fill a {
-  font-weight: 500;
-  color: #ccc;
-}
-#nav-main .nav-fill a:hover {
-  text-decoration: underline;
-}
-#nav-main .nav-right {
-  padding-right: 6px;
-}
-#nav-main .nav-right a {
-  margin-top: 6px;
-}
-#nav-main .nav-right .cart {
-  background: transparent url(../img/cart.png) no-repeat 11px 11px;
-  background-size: 39px;
-  padding: 7px 20px 7px 50px;
-}
-#nav-main .nav-right .cart span {
-  color: #f08804;
-  margin-left: -20px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1560px;
-  }
-  .container1 
-{
-    width: 151%;
-}
-}
-.container
-{
-	display: inline-flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-.boxf
-{
-	display: flex;
-	flex-direction: column;
-	
-	align-items: center;
-}
-.text {
-    background-color: white;
-    width: 220.5px;
-    text-align: center;
-    height: 100px;
-}
-a
-{
-    text-decoration: none;
-    color: black;
-    font-family: sans-serif;
-
-}
-.nav-right img
-{
-  position: fixed;
-    top: 14px;
-    left: 1018px;
-
-}
-</style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome.min.css">
+  <style>
+    html,
+    body {
+      margin: 0;
+      font-family: arial, sans-serif;
+      min-width: 900px;
+      line-height: 14px;
+      font-size: 14px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    a {
+      color: #0066c0;
+    }
+    a:hover {
+      color: #c45500;
+    }
+    #banner {
+      background: #F6F6F6 url('../img/banner.jpg') no-repeat top left;
+      height: 55px;
+      background-size: 1920px;
+      min-width: 1000px;
+      display: block;
+    }
+    header {
+      background-color: #232f3e;
+      height: 99px;
+    }
+    .nav-left {
+      position: relative;
+      float: left;
+      width: auto;
+      display: inline-block;
+    }
+    .nav-right {
+      position: relative;
+      float: right;
+      width: auto;
+      display: inline-block;
+    }
+    .nav-fill {
+      width: auto;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    #nav-logo {
+      padding: 11px 18px 0 24px;
+      position: relative;
+      width: 192px;
+    }
+    #nav-logo .nav-logo-link {
+      background: transparent url('../img/logo.png') no-repeat top left;
+      background-size: 102px;
+      width: 192px;
+      height: 32px;
+      display: block;
+    }
+    #nav-logo .nav-logo-tagline {
+      color: #48a3c6;
+      position: absolute;
+      top: 31px;
+      left: 93px;
+      font-size: 11px;
+      line-height: 11px;
+      font-family: arial, sans-serif;
+      font-weight: 700;
+    }
+    #nav-logo .nav-logo-tagline:hover {
+      color: #ffffff;
+    }
+    #nav-holiday {
+      top: 9px;
+      position: relative;
+      background-image: url('../img/fathers_day.jpg');
+      width: 400px;
+      height: 39px;
+    }
+    #nav-holiday a {
+      display: block;
+      height: 100%;
+    }
+    #nav-search {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      padding-top: 11px;
+      padding-right: 25px;
+    }
+    #nav-search input {
+      width: 100%;
+    }
+    #nav-search .nav-left {
+      height: 35px;
+      background-color: #f3f3f3;
+      border-radius: 4px 0 0 4px;
+      border: 1px solid #cdcdcd;
+      overflow: hidden;
+    }
+    #nav-search .nav-left:hover {
+      background-color: #dadada;
+      border-left-color: #dadada;
+      border-top-color: #dadada;
+      border-bottom-color: #dadada;
+    }
+    #nav-search .nav-search-label {
+      color: #777;
+      display: block;
+      font-size: 12px;
+      line-height: 33px;
+      ;
+      margin-right: 21px;
+      margin-left: 10px;
+    }
+    #nav-search .nav-left i {
+      position: absolute;
+      top: 10px;
+      right: 9px;
+      color: #a0a0a0;
+      font-size: 11px;
+    }
+    #nav-search select {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      opacity: 0;
+      height: 35px;
+      display: block;
+      outline: none;
+      cursor: pointer;
+    }
+    #nav-search .nav-fill {
+      height: 35px;
+      overflow: hidden;
+    }
+    #nav-search .nav-fill input {
+      border: none;
+      height: 35px;
+      padding: 5px 10px;
+      font-size: 15px;
+      color: #111;
+      outline: none;
+    }
+    #nav-search .nav-right {
+      background-color: #febd69;
+      width: 45px;
+      height: 35px;
+      border-radius: 0 4px 4px 0;
+    }
+    #nav-search .nav-right:hover {
+      background-color: #f3a847;
+    }
+    #nav-search .nav-right i {
+      position: absolute;
+      top: 5px;
+      right: 13px;
+      color: #333;
+      font-size: 22px;
+      opacity: 0.9;
+    }
+    #nav-search .nav-right input {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: block;
+      outline: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      text-indent: -1000px;
+    }
+    #nav-main ul {
+      list-style-type: none;
+      position: relative;
+      padding: 0;
+      margin: 18px 0 0 0;
+    }
+    #nav-main li {
+      display: inline-block;
+      padding: 10px 9px 0 0;
+    }
+    #nav-main a {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    #nav-main .nav-a {
+      padding: 7px 10px;
+      border: 1px solid transparent;
+      display: inline-block;
+      position: relative;
+    }
+    #nav-main .nav-a:hover {
+      border: 1px solid #4f5965;
+      border-radius: 3px;
+      box-shadow: 0 1px 0 0 rgba(255, 255, 255, .5);
+    }
+    #nav-main .nav-a span {
+      display: block;
+      margin-left: -2px;
+      font-weight: 300;
+      color: #ccc;
+      font-size: 12px;
+    }
+    #nav-main i.fa-caret-down {
+      color: #ccc;
+      font-size: 11px;
+      padding-left: 3px;
+    }
+    #nav-main .nav-left {
+      height: 55px;
+    }
+    #nav-main .nav-left .nav-shop {
+      float: left;
+      width: 192px;
+      padding: 4px 12px 0 15px;
+    }
+    #nav-main .nav-left .nav-shop a {
+      margin-top: 16px;
+    }
+    #nav-main .nav-fill a {
+      font-weight: 500;
+      color: #ccc;
+    }
+    #nav-main .nav-fill a:hover {
+      text-decoration: underline;
+    }
+    #nav-main .nav-right {
+      padding-right: 6px;
+    }
+    #nav-main .nav-right a {
+      margin-top: 6px;
+    }
+    #nav-main .nav-right .cart {
+      background: transparent url(../img/cart.png) no-repeat 11px 11px;
+      background-size: 39px;
+      padding: 7px 20px 7px 50px;
+    }
+    #nav-main .nav-right .cart span {
+      color: #f08804;
+      margin-left: -20px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    @media (min-width: 1200px) {
+      .container {
+        width: 1560px;
+      }
+      .container1 {
+        width: 151%;
+      }
+    }
+    .container {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .boxf {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .text {
+      background-color: white;
+      width: 220.5px;
+      text-align: center;
+      height: 100px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: sans-serif;
+    }
+    .nav-right img {
+      position: fixed;
+      top: 14px;
+      left: 1018px;
+    }
+  </style>
 </head>
 <body background="gray">
-
   <!-- Main body -->
-
   <header>
     <a id="nav-top"></a>
     <div id="nav-belt">
@@ -320,10 +308,11 @@ a
               <i class="fa fa-caret-down" aria-hidden="true"></i>
 
             </div>
-            <div class="nav-right">       
+            <div class="nav-right">
 
-	<input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Go" tabindex="0">
-	<img src="/images/icon/srch.png"></i>
+              <input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Go"
+                tabindex="0">
+              <img src="images/icon/srch.png"></i>
             </div>
             <div class="nav-fill">
               <input type="text" autocomplete="off">
@@ -375,57 +364,56 @@ a
       </div>
     </nav>
   </header>
-<div class="container">
-	<a href="C:\Users\Dell\Desktop\affiliate\fashio.html">
-	<div class="boxf">
-	<img src=".\images\fashion.png" width="100%">	
-	</div>	
-	</a>
-</div>
-<br>
-<hr>	
-<div class="container">
-	<a href="https://amzn.to/46wFcqa">
-	<div class="boxf">
-	<img src=".\images\product1\product1.jpg" width="45%">	
-	<div class="text">
-	<p><b>portronics Clean</b> </p>
-	Multifunctional 8-in-1 gadget	
-	</div>
-	</div>	
-	</a>
-	<a href="https://amzn.to/449I6zP">
-	<div class="boxf">
-	<img src=".\images\product 2\printer.jpg" width="60%">	
-	<div class="text">
-	<p><b>Mini Pocket Sticker Printer</b> </p>
-	Bluetooth Pocket Thermal Printer-Portable Smart Photo Printer	
-	</div>
-	</div>	
-	</a>
-</div>
+  <div class="container">
+    <a href="fashio.html">
+      <div class="boxf">
+        <img src=".\images\fashion.png" width="100%">
+      </div>
+    </a>
+  </div>
+  <br>
+  <hr>
+  <div class="container">
+    <a href="https://amzn.to/46wFcqa">
+      <div class="boxf">
+        <img src=".\images\product1\product1.jpg" width="45%">
+        <div class="text">
+          <p><b>portronics Clean</b> </p>
+          Multifunctional 8-in-1 gadget
+        </div>
+      </div>
+    </a>
+    <a href="https://amzn.to/449I6zP">
+      <div class="boxf">
+        <img src=".\images\product 2\printer.jpg" width="60%">
+        <div class="text">
+          <p><b>Mini Pocket Sticker Printer</b> </p>
+          Bluetooth Pocket Thermal Printer-Portable Smart Photo Printer
+        </div>
+      </div>
+    </a>
+  </div>
 
-<div class="container">
-	<a href="https://amzn.to/46wFcqa">
-	<div class="boxf">
-	<img src=".\images\product1\product1.jpg" width="45%">	
-	<div class="text">
-	<p><b>portronics Clean</b> </p>
-	Multifunctional 8-in-1 gadget	
-	</div>
-	</div>	
-	</a>
-	<a href="https://amzn.to/449I6zP">
-	<div class="boxf">
-	<img src=".\images\product 2\printer.jpg" width="60%">	
-	<div class="text">
-	<p><b>Mini Pocket Sticker Printer</b> </p>
-	Bluetooth Pocket Thermal Printer-Portable Smart Photo Printer	
-	</div>
-	</div>	
-	</a>
-</div>
-
+  <div class="container">
+    <a href="https://amzn.to/3Ofnv7q">
+      <div class="boxf" style="width: 62%;">
+        <img src=".\images\product3\product 3.jpg" width="45%">
+        <div class="text">
+          <p><b>portronics Clean</b> </p>
+          Multifunctional 8-in-1 gadget
+        </div>
+      </div>
+    </a>
+    <a href="https://amzn.to/449I6zP">
+      <div class="boxf" style="width: 321px;">
+        <img src=".\images\product4\product4.jpg" width="60%">
+        <div class="text">
+          <p><b>TECNOVIQ </b> </p>
+          Drawer Organizer Wardrobe Clothes Storage 7
+        </div>
+      </div>
+    </a>
+  </div>
 
 </body>
 
